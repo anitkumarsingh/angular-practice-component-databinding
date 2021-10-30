@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-body">
+    <h5
+      class="card-title"
+      *ngIf="elem.type === 'server'"
+      style="color: red"
+    >
+      {{ elem.name }}
+    </h5>
+    <h5
+      class="card-title"
+      *ngIf="elem.type === 'blueprints'"
+      style="color: green"
+    >
+      {{ elem.name }}
+    </h5>
+    <p class="card-text">
+      {{ elem.content }}
+    </p>
+  </div>
+</div>
