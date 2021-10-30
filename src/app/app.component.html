@@ -10,7 +10,11 @@
       <app-server-elements
         *ngFor="let server of servers"
         [aliasElement]="server"
-      ></app-server-elements>
+      >
+      <p class="card-text">
+        {{ server.content }}
+      </p>
+    </app-server-elements>
     </div>
   </div>
 </div>
