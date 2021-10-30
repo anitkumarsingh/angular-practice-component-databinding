@@ -8,18 +8,10 @@
     <label for="content">Content</label>
     <!-- <input type="text" class="form-control" [(ngModel)] ="serverContent"><br> -->
     <input type="text" class="form-control" #localServerContent /><br />
-    <button
-      class="btn btn-primary mr-2"
-      (click)="addServers(localServerName,localServerContent)"
-      [disabled]="localServerName.value === '' || localServerContent.value === ''"
-    >
+    <button class="btn btn-primary mr-2" (click)="addServers(localServerName)">
       Add Server
     </button>
-    <button
-      class="btn btn-success"
-      (click)="bluePrintServers(localServerName,localServerContent)"
-      [disabled]="localServerName.value === '' || localServerContent.value === ''"
-    >
+    <button class="btn btn-success" (click)="bluePrintServers(localServerName)">
       Blueprint Servers
     </button>
   </div>
