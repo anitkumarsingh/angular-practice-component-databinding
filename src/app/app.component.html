@@ -1,5 +1,9 @@
 <div class="container">
-  <app-cockpit></app-cockpit>
+  <app-cockpit
+    (serverCreated)="onServerAdded($event)"
+    (bluePrintserverCreated)="onBluePrintServerAdded($event)"
+  >
+  </app-cockpit>
   <div class="row">
     <div class="col-xs-12">
       <app-server-elements
