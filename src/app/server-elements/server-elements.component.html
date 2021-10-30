@@ -2,20 +2,20 @@
   <div class="card-body">
     <h5
       class="card-title"
-      *ngIf="elem.type === 'server'"
+      *ngIf="element.type === 'server'"
       style="color: red"
     >
-      {{ elem.name }}
+      {{ element.name }}
     </h5>
     <h5
       class="card-title"
-      *ngIf="elem.type === 'blueprints'"
+      *ngIf="element.type === 'blueprints'"
       style="color: green"
     >
-      {{ elem.name }}
+      {{ element.name }}
     </h5>
     <p class="card-text">
-      {{ elem.content }}
+      {{ element.content }}
     </p>
   </div>
 </div>
