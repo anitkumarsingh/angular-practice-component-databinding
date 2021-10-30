@@ -1,10 +1,26 @@
 <div class="row">
   <div class="col-xs-12 mt-3">
     <label for="name">Name</label>
-    <input type="text" class="form-control" [(ngModel)] ="serverName">
+    <!-- Two way binding -->
+    <!-- <input type="text" class="form-control" [(ngModel)] ="serverName"> -->
+    <!-- Local references -->
+    <input type="text" class="form-control" #localServerName />
     <label for="content">Content</label>
-    <input type="text" class="form-control" [(ngModel)] ="serverContent"><br>
-    <button class="btn btn-primary mr-2" (click)="addServers()" [disabled]="serverName ==='' || serverContent ==='' ">Add Server</button>
-    <button class="btn btn-success " (click)="bluePrintServers()" [disabled]="serverName ==='' || serverContent ==='' ">Blueprint Servers</button>
+    <!-- <input type="text" class="form-control" [(ngModel)] ="serverContent"><br> -->
+    <input type="text" class="form-control" #localServerContent /><br />
+    <button
+      class="btn btn-primary mr-2"
+      (click)="addServers(localServerName,localServerContent)"
+      [disabled]="localServerName.value === '' || localServerContent.value === ''"
+    >
+      Add Server
+    </button>
+    <button
+      class="btn btn-success"
+      (click)="bluePrintServers(localServerName,localServerContent)"
+      [disabled]="localServerName.value === '' || localServerContent.value === ''"
+    >
+      Blueprint Servers
+    </button>
   </div>
 </div>
